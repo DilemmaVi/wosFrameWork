@@ -1,6 +1,6 @@
 package com.wos.controller;
 
-import com.wos.utils.PropertyUtils;
+import com.wos.pojo.WosReturnModel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,9 +19,9 @@ public class HelloController {
 
 
     @RequestMapping("/hello")
-    public String hello() {
-        String property = PropertyUtils.get("hello.data");
+    public WosReturnModel hello() {
+        int a = 1 / 0;
 
-        return property;
+        return WosReturnModel.ok(a);
     }
 }
