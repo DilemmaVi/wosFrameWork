@@ -1,7 +1,14 @@
 package com.wos.pojo;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
-import javax.persistence.*;
+
+/**
+ * @author chenyuwei
+ * @date 2018/10/21
+ */
 
 @Table(name = "sys_user")
 public class SysUser {
@@ -263,12 +270,12 @@ public class SysUser {
 
     /**
      * 获取删除标识
-0：没有删除
-1：已删除
+        0：没有删除
+        1：已删除
      *
      * @return is_delete - 删除标识
-0：没有删除
-1：已删除
+        0：没有删除
+        1：已删除
      */
     public Integer getIsDelete() {
         return isDelete;
@@ -276,12 +283,12 @@ public class SysUser {
 
     /**
      * 设置删除标识
-0：没有删除
-1：已删除
+        0：没有删除
+        1：已删除
      *
      * @param isDelete 删除标识
-0：没有删除
-1：已删除
+        0：没有删除
+        1：已删除
      */
     public void setIsDelete(Integer isDelete) {
         this.isDelete = isDelete;
