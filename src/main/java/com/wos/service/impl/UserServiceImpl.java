@@ -1,5 +1,6 @@
 package com.wos.service.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageHelper;
 import com.wos.mapper.SysUserMapper;
 import com.wos.pojo.SysUser;
@@ -11,12 +12,14 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
  * @author chenyuwei
  * @date 2018/10/21
  */
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -24,6 +27,10 @@ public class UserServiceImpl implements UserService {
     private SysUserMapper userMapper;
 
 
+    @Override
+    public SysUser authLogin(JSONObject requestJson) {
+        return null;
+    }
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED)
